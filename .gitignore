@@ -1,7 +1,6 @@
 **/node_modules
 **/xeno
 /packages/*/dist
-/theatre/*/dist
 /examples/*/dist
 *.log
 *.temp
@@ -18,3 +17,11 @@
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Required by the `parcel_v2`
+# compatibility tests
+.parcel-cache
+
+/compat-tests/*/.yarn
+/compat-tests/*/build
+/TODO.md

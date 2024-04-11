@@ -1,0 +1,51 @@
+{
+  "name": "theatric",
+  "version": "0.7.0",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Andrew Prifer",
+    "email": "andrew.prifer@gmail.com",
+    "url": "https://github.com/AndrewPrifer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theatre-js/theatre",
+    "directory": "packages/theatric"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "prepack": "node ../../devEnv/ensurePublishing.js",
+    "typecheck": "yarn run build",
+    "build": "run-s build:ts build:js build:api-json",
+    "build:ts": "tsc --build ./tsconfig.json",
+    "build:js": "tsx ./devEnv/build.ts",
+    "build:api-json": "api-extractor run --local --config devEnv/api-extractor.json",
+    "prepublish": "node ../../devEnv/ensurePublishing.js",
+    "clean": "rm -rf ./dist && rm -f tsconfig.tsbuildinfo"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.18.11",
+    "@theatre/dataverse": "workspace:*",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.6.2",
+    "@types/react": "^18.2.18",
+    "esbuild": "^0.12.15",
+    "lodash-es": "^4.17.21",
+    "npm-run-all": "^4.1.5",
+    "tsx": "4.7.0",
+    "typescript": "5.1.6"
+  },
+  "dependencies": {
+    "@theatre/core": "workspace:*",
+    "@theatre/react": "workspace:*",
+    "@theatre/studio": "workspace:*",
+    "oauth4webapi": "^2.4.0"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}

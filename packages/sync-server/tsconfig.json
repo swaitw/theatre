@@ -1,0 +1,25 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "outDir": "dist",
+    "types": ["node", "jest"],
+    "baseUrl": ".",
+    "composite": true,
+    "paths": {
+      "@theatre/utils/*": ["../utils/src/*"],
+      "@theatre/app/*": ["../app/src/*"],
+      "@theatre/core/*": ["../core/src/*"],
+      "@theatre/core": ["../core/src/index.ts"]
+    }
+  },
+  "references": [
+    {"path": "../utils"},
+    {"path": "../app"},
+    {"path": "../saaz"},
+    {"path": "../core"}
+  ],
+  "include": ["./env.d.ts", "./src/**/*", "devEnv/**/*", "./prisma/seed.ts"],
+  "exclude": ["**/node_modules", "**/.*", "**/xeno", "**/dist", "**/.temp"]
+}

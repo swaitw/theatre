@@ -1,8 +1,5 @@
 import * as core from '@theatre/core'
-import studio from '@theatre/studio'
+import '@theatre/studio'
 
 // @ts-ignore
-window.Theatre = {
-  core,
-  studio,
-}
+window.Theatre = core

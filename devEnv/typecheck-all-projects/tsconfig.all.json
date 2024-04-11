@@ -6,10 +6,19 @@
   },
   "files": [],
   "references": [
-    {"path": "../../theatre"},
     {"path": "../../packages/dataverse"},
     {"path": "../../packages/playground"},
+    {"path": "../../packages/benchmarks"},
+    {"path": "../../packages/react"},
     {"path": "../../packages/r3f"},
-    {"path": "../../examples/basic-dom"}
+    {"path": "../../examples/basic-dom"},
+    {"path": "../../compat-tests"},
+    {"path": "../../devEnv"},
+    {"path": "../../packages/app"},
+    {"path": "../../packages/core"},
+    {"path": "../../packages/studio"},
+    {"path": "../../packages/sync-server"},
+    {"path": "../../packages/saaz"},
+    {"path": "../../packages/utils"}
   ]
 }

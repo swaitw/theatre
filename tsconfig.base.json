@@ -16,17 +16,23 @@
     "stripInternal": true,
     "declaration": true,
     "paths": {
-      "@theatre/core": ["./theatre/core/src/index.ts"],
-      "@theatre/studio": ["./theatre/studio/src/index.ts"],
-      "@theatre/studio/*": ["./theatre/studio/src/*"],
-      "@theatre/core/*": ["./theatre/core/src/*"],
-      "@theatre/shared/*": ["./theatre/shared/src/*"],
+      "@theatre/core": ["./packages/core/src/index.ts"],
+      "@theatre/core/*": ["./packages/core/src/*"],
+      "@theatre/studio": ["./packages/studio/src/index.ts"],
+      "@theatre/studio/*": ["./packages/studio/src/*"],
+      "@theatre/utils": ["./packages/utils/src/index.ts"],
+      "@theatre/utils/*": ["./packages/utils/src/*"],
+      "@theatre/saaz": ["./packages/saaz/src/index.ts"],
+      "@theatre/app/*": ["./packages/app/src/*"],
+      "@theatre/sync-server/*": ["./packages/sync-server/src/*"],
       "@theatre/dataverse": ["./packages/dataverse/src/index.ts"],
       "@theatre/react": ["./packages/react/src/index.ts"],
-      "@theatre/r3f": ["./packages/r3f/src/index.tsx"],
+      "@theatre/r3f": ["./packages/r3f/src/index.ts"],
+      "@theatre/r3f/dist/extension": ["./packages/r3f/src/extension/index.ts"],
       "@theatre/dataverse-experiments": [
         "./packages/dataverse-experiments/src/index.ts"
-      ]
+      ],
+      "theatric": ["./packages/theatric/src/index.ts"]
     },
     "forceConsistentCasingInFileNames": true
   },

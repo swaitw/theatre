@@ -5,9 +5,10 @@
     "lib": ["ESNext", "DOM"],
     "rootDir": "src",
     "types": ["jest", "node"],
+    "jsx": "react",
     "emitDeclarationOnly": true,
     "composite": true
   },
-  "references": [{"path": "../../theatre"}],
+  "references": [{"path": "../studio"}, {"path": "../core"}],
   "include": ["./src/**/*"]
 }

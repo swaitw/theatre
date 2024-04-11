@@ -18,15 +18,24 @@
  *
  *  return atom
  * ```
+ *
+ * @type {import("eslint").Linter.Config}
  */
-
 module.exports = {
   root: true,
-  plugins: ['unused-imports', 'eslint-plugin-tsdoc'],
+  plugins: ['unused-imports', 'eslint-plugin-tsdoc', 'import', 'react'],
+  settings: {
+    react: {
+      version: '18.2',
+    },
+  },
   extends: [],
   rules: {
     'unused-imports/no-unused-imports': 'warn',
     'tsdoc/syntax': 'warn',
+    'no-debugger': 'error',
+    'react/no-deprecated': 'error',
+
     'no-restricted-imports': [
       'error',
       {
@@ -39,7 +48,7 @@ module.exports = {
       },
     ],
   },
-  ignorePatterns: ['*.d.ts', '*.ignore.ts'],
+  ignorePatterns: ['*.d.ts', '*.ignore.ts', 'compat-tests/*'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -47,11 +56,11 @@ module.exports = {
       plugins: ['@typescript-eslint'],
       parserOptions: {
         project: [
-          './theatre/tsconfig.json',
           './packages/*/tsconfig.json',
           './packages/*/devEnv/tsconfig.json',
           './examples/*/tsconfig.json',
           './devEnv/tsconfig.json',
+          './compat-tests/tsconfig.json',
         ],
       },
       rules: {
@@ -65,6 +74,7 @@ module.exports = {
           },
         ],
         '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-floating-promises': 'warn',
       },
     },
     {
@@ -73,6 +83,7 @@ module.exports = {
       rules: {
         'react/jsx-uses-react': 'error',
         'react/jsx-uses-vars': 'error',
+        'tsdoc/syntax': 'off',
       },
       parser: 'espree',
       parserOptions: {

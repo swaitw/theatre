@@ -6,12 +6,20 @@
     "rootDir": ".",
     "types": ["jest", "node"],
     "emitDeclarationOnly": false,
-    "composite": true
+    "composite": true,
+    "resolveJsonModule": true
   },
   "references": [
-    {"path": "../../theatre"},
+    {"path": "../core"},
+    {"path": "../studio"},
     {"path": "../dataverse"},
-    {"path": "../r3f"}
+    {"path": "../r3f"},
+    {"path": "../theatric"}
   ],
-  "include": ["./src/**/*", "./devEnv/**/*"]
+  "include": [
+    "./src/**/*",
+    "./src/**/*.json",
+    "./devEnv/**/*",
+    "./vite.config.ts"
+  ]
 }
