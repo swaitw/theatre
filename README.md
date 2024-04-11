@@ -14,7 +14,7 @@
  
 </p>
 
-> ✨ Update: [We're hiring – join the core team!](https://www.theatrejs.com/join)
+> ✨ Update: Theatre.js 1.0 is around the corner. We have _temporarily_ moved development to a private repo so we can iterate faster. We'll push our work back to this public repo soon. Terms and license will remain OSS, as before. (Also, [we're hiring – join the core team!](https://www.theatrejs.com/join)).
 
 Theatre.js is an animation library for high-fidelity motion graphics. It is
 designed to help you express detailed animation, enabling you to create
